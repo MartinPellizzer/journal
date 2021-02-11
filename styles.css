@@ -4,11 +4,18 @@
 	padding: 0;
 }
 
-body {
-	background: #f2f2f2;
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+	color: #111;
 }
 
-.root {
+body {
+	background: #fff;
+}
+
+
+.wrapper {
 	background: #fff;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -20,4 +27,25 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+article {
+	background: #fff;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 6.0rem;	
+}
+
+h2 {
+	font-size: 4.8rem;	
+	margin-top: 4.8rem;
+}
+
+p {
+	font-size: 1.8rem;
+	line-height: 1.618;
+	margin-top: 1.8rem;
 }

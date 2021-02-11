@@ -1,0 +1,84 @@
+
+
+;1 The Engineering Of An Electronic Personal Trainer
+
+Dear (other) me,
+
+Are you still alive? I've heard you've been wasting your entire life over a keybord lately... Is programming firmwares for baremetal microcontrollers really this addictive?
+
+Well, never mind that... What I really meant to ask is...
+
+Can you still walk straight? Isn't your back irreversibly compromised by now? And isn't your neck making you scream in pain?
+
+Listen to me... You have to do something about it... And quickly!
+
+Be Strong,
+
+Your beloved Alterego
+
+
+
+;2 The Calm Before The Storm
+
+Bleah, what a ugly day.
+
+Today is cloudy. Almost rainy. This weather makes me fell sick, tired and totally unmotivated.
+
+Yes, I know I should exercise every now and then. I'm spending long hours in front of a computer, and that's bad for my body.
+
+I'm fully aware of this. But still...
+
+It's sooo hard to find the motivation on a day like this.
+
+Well, in all honesty, I believe I must accept the harsh truth. And that's, unlike in movies, self-motivation simply doesn't exist in the "real" world.
+
+Yes, I beleve my body was hardwired since the day I was born to be lazy and self-preserving. Anything that doesn't give me immediate reward (or pleasure) is subconciously a threat.
+
+So, here's my conclusion...
+
+I can't win this fight alone. Period.
+
+But here's the keyword: ALONE!
+
+I need someone to boss me around. Someone that remembers me it's time to leave the chair.
+
+Unfortunately though, I can't stand the thought of being bossed around by aother "human being". So I must find an alternative.
+
+And there's only one alternative that comes to mind...
+
+Correct! I'm going to build a machine for that.
+
+A small gadget that will tell me what to do and when. A little piece of j**k that will controll my life.
+
+And I'll start building it right now...
+
+;2 The Battleplan
+
+To make things easy, I should give this electronic personal trainer a name.
+
+And thy name shall be: Kyactus.
+
+Good. Now that the hard part is done, let's quickly define her functionalities...
+
+On the first version, Kyactus should be able to alarm me when it's time to excercise. This alarm should fire ever 30 (or so) minutes, and it should be pretty annoying too.
+
+Also, she must have a way to "validate" if I were able to performed the exercise. This is going to be vital if I want to track my progess.
+
+Well, I believe this is it for our first version (1.0.0).
+
+Easy... Ahhh?
+
+Pfff... Not a chance! That would be too easy...
+
+;2 The 7 Engineering Commandaments
+
+To make things harder, I'm going to obey to the 7 engineering commandments (which I conviniently made up just for this occasion).
+
+Here are the commandments:
+;* Thy shall be cheap (very cheap);
+;* Thy shall be small (very small);
+;* Thy shall be low-power (kind of);
+;* Thy shall be mass-producible (with little to no manual labor);
+;* Thy shall be addictive (gammification?);
+;* Thy shall follow the MVP way (minimum viable product); 
+;* Thy shall follow the UIT way (unit/integration testing);
