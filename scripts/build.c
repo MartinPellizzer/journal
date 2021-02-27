@@ -99,6 +99,7 @@ char get_tag_id(char *line)
 {
 	if(strncmp(line, ";1 ", 3) == 0) return 1;
 	else if(strncmp(line, ";2 ", 3) == 0) return 2;
+	else if(strncmp(line, ";3 ", 3) == 0) return 3;
 	else return 0;
 }
 
@@ -106,6 +107,7 @@ void insert_opening_tag(char tag_id, FILE *fwrite)
 {
 	if(tag_id == 1) fprintf(fwrite, "<h1>");
 	else if(tag_id == 2) fprintf(fwrite, "<h2>");
+	else if(tag_id == 3) fprintf(fwrite, "<h3>");
 	else fprintf(fwrite, "<p>");
 }
 
@@ -113,6 +115,7 @@ void insert_closing_tag(char tag_id, FILE *fwrite)
 {
 	if(tag_id == 1) fprintf(fwrite, "</h1>");
 	else if(tag_id == 2) fprintf(fwrite, "</h2>");
+	else if(tag_id == 3) fprintf(fwrite, "</h3>");
 	else fprintf(fwrite, "</p>");
 }
 
@@ -125,6 +128,5 @@ void insert_line(char tag_id, char *line, FILE *fwrite)
 		if(line[i] == '\n') break;
 		fputc(line[i], fwrite);
 	}
-	
 }
 
