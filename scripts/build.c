@@ -17,7 +17,7 @@ int main()
 {
 	char str[255];
 
-	FILE *fread = fopen("./articles/personal-trainer.txt", "r");
+	FILE *fread = fopen("../articles/personal-trainer.txt", "r");
 
 	if(fread == NULL)
 	{
@@ -25,15 +25,13 @@ int main()
 		return(-1);
 	}
 
-	FILE *fwrite = fopen("./martinpellizzer/personal-trainer.html", "w");
+	FILE *fwrite = fopen("../personal-trainer.html", "w");
 	generate_html(fread, fwrite);
 	fclose(fwrite);
 
 	fclose(fread);
 
-
-
-	FILE *fp = fopen("./martinpellizzer/personal-trainer.html", "r");
+	FILE *fp = fopen("../personal-trainer.html", "r");
 
 	if(fp == NULL)
 	{
