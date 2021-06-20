@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Martin Pellizzer</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.code {
+			padding: 30px 30px;
+			background-color: #303030;
+			color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<header id="header" class="shadow bg-light">
+		<nav class="container navbar">
+			<a href="/index.html" class="nav-brand text-dark">
+				Martin Pellizzer
+			</a>
+		</nav>
+	</header>
+	<main>
+		<h1>
+			Node Editor Pt. 5 - Pixel Buffer
+		</h1>
+		<p>
+		
+		<strong>
+			Updated Code:
+		</strong>
+<div class="code">
+<p style="font-size:12px;"><strong>ADD GLOBAL VARIABLE:</strong></p>
+<hr style="margin:3px 0; max-width:600px;">
+<pre><code><span style="color:#A0FfA0;">uint32_t *pixel_buffer = NULL;</span></code></pre>
+<div style="height:30px;"></div>
+<p style="font-size:12px;"><strong>ADD FUNCTION:</strong></p>
+<hr style="margin:3px 0; max-width:600px;">
+<pre><code><span style="color:#A0FfA0;">void init_pixel_buffer()
+{
+	pixel_buffer = (uint32_t*)malloc(sizeof(uint32_t) * 1280 * 720);
+}</span></code></pre>
+<div style="height:30px;"></div>
+<p style="font-size:12px;"><strong>EDIT FUNCTION:</strong></p>
+<hr style="margin:3px 0; max-width:600px;">
+<pre><code>int main()
+{
+	sdl_init();
+	<span style="color:#A0FfA0;">init_pixel_buffer();</span>
+
+	is_running = 1;
+	while(is_running)
+	{
+		process_input();
+	}
+
+	return 0;
+}</code></pre>
+</div>
+
+		
+	</main>
+</body>
+</html>
+
+

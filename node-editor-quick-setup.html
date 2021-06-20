@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Martin Pellizzer</title>
+</head>
+<body>
+	<header id="header" class="shadow bg-light">
+		<nav class="container navbar">
+			<a href="/index.html" class="nav-brand text-dark">
+				Martin Pellizzer
+			</a>
+		</nav>
+		<h1>
+			Node Editor Pt. 1 - Quick Setup
+		</h1>
+		<p>
+			As I anticipated in the previous part, we are going to use SDL to create our window. So, what is SDL?
+		</p>
+		<p>
+			Long story short, SDL is a library (written in C) that will help us draw "stuff" on the screen. End of the story!
+		</p>
+		<p>
+			Ok ok... fair enough... let me elaborate a little bit more on that.
+		</p>
+		<p>
+			As we want to build a program with a graphical user interface (GUI), and NOT just a simple command-line utility, we have to take care of a lot of things. To name a few: 
+		</p>
+		<ul>
+			<li> we need to create a window</li>
+			<li> we need to create a renderer</li>
+			<li> we need to get and react to input (mouse and keyboard)</li>
+			<li> blah blah blah...</li>
+		</ul>
+		<p>
+			Unfortunatelly, all this stuff takes both time and OS-specific knowledge. That said, we are here to ONLY make a node editor, and NOT to develop a platform-layer API.
+		</p>
+		<p>
+			In conlusion, we will use SDL to easily create a <strong>Window</strong> with a <strong>Renderer</strong>, and we will also use it to easily get <strong>Inputs</strong> from the mouse and the keyboard.
+		</p>
+		<p>
+			That's it! Nothing more.
+		</p>
+		<p>
+			After we get a blank window opened, we will start building our node editor fron scratch in plain C.
+		</p>
+		<h3>
+			Developing Environment
+		</h3>
+		<p>
+			Windows, MacOS, Linux... Pick your poison. 
+		</p>
+		<p>
+Personally, I'm going to use Linux (Ubuntu). 
+		</p>
+		<h4>
+			Linux Setup
+		</h4>
+		<p>
+			If you already have Linux installed on your PC, good!! If not, I suggest you to install it in a virtual machine (search on youtube for "Install Ubuntu On A Virtual Machine", or something like that).
+		</p>
+		<h4>
+			Installing Packages
+		</h4>
+		<p>
+			In order to be able to compile C code, we need to quickly install a couple of packages.
+		</p>
+		<p>
+			So, after you have your Ubuntu up and running, open the terminal and type the following command:
+		</p>
+		<pre>
+			<code>
+				sudo apt install build-essential
+				sudo apt install libsdl2-dev
+			</code>
+		</pre>
+		<p>
+			Nice. Now you have all you need to build a C program. 
+		</p>
+		<p>
+		<h4>
+			Writing Our First C Program
+		</h4>
+			Let's write our first C program. Open a text editor (in my case Vim) and create a file named <i>main.c</i>. Inside <i>main.c</i> type the following:
+		</p>
+		<pre>
+			<code>
+				#include &ltstdio.h&gt
+
+				int main()
+				{
+					printf("first test\n");
+					return 0;
+				}
+			</code>
+		</pre>
+		<p>
+			Save the file. And move to the next step.
+		<h4>
+			Compiling/Running Our First C Program
+		</h4>
+			To build and run your program, navigate with your terminal to the folder where you created your file, and type on your terminal the following:
+		</p>
+		<pre>
+			<code>
+				gcc main.c
+				./a.out
+			</code>
+		</pre>
+		<p>
+			If you are able to see the words <i>first test</i> in your terminal, then conrats.
+		</p>
+		<h4>
+			Adding The SDL Library To Our C Code
+		</h4>
+		<p>
+			The last step for today, is to add the SDL library in our code and init it. That said, open your <i>main.c</i> and add the following code (code added in bold):
+		</p>
+		<pre>
+			<code>
+				#include &ltstdio.h&gt
+				<strong>#include &ltSDL2/SDL.h&gt</strong>
+
+				int main()
+				{
+					<strong>SDL_Init(SDL_INIT_EVERYTHING)</strong>;
+					printf("first test\n");
+					return 0;
+				}
+			</code>
+		</pre>
+		<h4>
+			Linking The SDL Library During Compilation
+		</h4>
+		<p>
+			If you try to compile the program now with <i>gcc main.c</i>, you should get an error. That's because you need to link the SDL library.
+		</p>
+		<p>
+			This is easy to do. Just add the following flag when compiling your code (code added in bold):
+		</p>
+		<pre>
+			<code>
+				gcc main.c <strong>-lSDL2</strong>
+				./a.out
+			</code>
+		</pre>
+		<p>
+			If you see no errors, good. If you do, good luck with debugging :)
+		</p>
+		<p>
+			That's all for the setup. Next, we will create the main window.
+		</p>
+	</header>
+</body>
+</html>
+
+

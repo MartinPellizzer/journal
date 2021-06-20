@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Martin Pellizzer</title>
+</head>
+<body>
+	<header id="header" class="shadow bg-light">
+		<nav class="container navbar">
+			<a href="/index.html" class="nav-brand text-dark">
+				Martin Pellizzer
+			</a>
+		</nav>
+	</header>
+	<main>
+		<h1>
+			Node Editor Pt. 2 - Create A New Window 
+		</h1>
+		<p>
+		
+		<strong>
+			Updated Function:
+		</strong>
+		<pre>
+			<code>
+				int main()
+				{
+					SDL_Init(SDL_INIT_EVERYTHING);
+					SDL_Window *window = SDL_CreateWindow("Ultima", 0, 0, 1280, 720, 0);
+					SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
+					
+					DL_Delay(1000);
+					
+					return 0;
+				}
+			</code>
+		</pre>
+		
+		<strong>
+			Changes:
+		</strong>
+		<pre>
+			<code>
+				int main()
+				{
+					<span style="color:red;">printf("first test");</span>
+					SDL_Init(SDL_INIT_EVERYTHING);
+					<span style="color:green;">SDL_Window *window = SDL_CreateWindow("Ultima", 0, 0, 1280, 720, 0);</span>
+					<span style="color:green;">SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);</span>
+					
+					<span style="color:green;">SDL_Delay(1000);</span>
+					
+					return 0;
+				}
+			</code>
+		</pre>
+		</p>
+	</main>
+</body>
+</html>
+
+

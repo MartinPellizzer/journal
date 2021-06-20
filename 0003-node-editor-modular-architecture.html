@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Martin Pellizzer</title>
+</head>
+<body>
+	<header id="header" class="shadow bg-light">
+		<nav class="container navbar">
+			<a href="/index.html" class="nav-brand text-dark">
+				Martin Pellizzer
+			</a>
+		</nav>
+	</header>
+	<main>
+		<h1>
+			Node Editor Pt. 3 - Modular Architecture 
+		</h1>
+		<p>
+		
+		<strong>
+			Updated Code:
+		</strong>
+		<pre>
+			<code>
+				#include &ltstdio.h&gt
+				#include &ltSDL2/SDL.h&gt
+				
+				// -------------------------------------------------------------------------
+				// ;global
+				// -------------------------------------------------------------------------
+				SDL_Window *window = NULL;
+				SDL_Renderer *renderer = NULL;
+
+				// -------------------------------------------------------------------------
+				// ;init
+				// -------------------------------------------------------------------------
+				void sdl_init()
+				{
+					SDL_Init(SDL_INIT_EVERYTHING);
+					window = SDL_CreateWindow("Ultima", 0, 0, 1280, 720, 0);
+					renderer = SDL_CreateRenderer(window, -1, 0);
+				}
+
+				// -------------------------------------------------------------------------
+				// ;main
+				// -------------------------------------------------------------------------
+				int main()
+				{
+					sdl_init();
+
+					SDL_Delay(1000);
+
+					return 0;
+				}
+			</code>
+		</pre>
+		
+		<strong>
+			Changes Log:
+		</strong>
+		<pre>
+			<code>
+				#include &ltstdio.h&gt
+				#include &ltSDL2/SDL.h&gt
+				
+				<span style="color:green;">// -------------------------------------------------------------------------</span>
+				<span style="color:green;">// ;global</span>
+				<span style="color:green;">// -------------------------------------------------------------------------</span>
+				<span style="color:green;">SDL_Window *window = NULL;</span>
+				<span style="color:green;">SDL_Renderer *renderer = NULL;</span>
+
+				<span style="color:green;">// -------------------------------------------------------------------------</span>
+				<span style="color:green;">// ;init</span>
+				<span style="color:green;">// -------------------------------------------------------------------------</span>
+				<span style="color:green;">void sdl_init()</span>
+				<span style="color:green;">{</span>
+					<span style="color:green;">SDL_Init(SDL_INIT_EVERYTHING);</span>
+					<span style="color:green;">window = SDL_CreateWindow("Ultima", 0, 0, 1280, 720, 0);</span>
+					<span style="color:green;">renderer = SDL_CreateRenderer(window, -1, 0);</span>
+				<span style="color:green;">}</span>
+
+				<span style="color:green;">// -------------------------------------------------------------------------</span>
+				<span style="color:green;">// ;main</span>
+				<span style="color:green;">// -------------------------------------------------------------------------</span>
+				int main()
+				{
+					<span style="color:red;">SDL_Init(SDL_INIT_EVERYTHING);</span>
+					<span style="color:red;">SDL_Window *window = SDL_CreateWindow("Ultima", 0, 0, 1280, 720, 0);</span>
+					<span style="color:red;">SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);</span>
+					<span style="color:green;">sdl_init();</span>
+
+					SDL_Delay(1000);
+
+					return 0;
+				}
+			</code>
+		</pre>
+		</p>
+	</main>
+</body>
+</html>
+
+
